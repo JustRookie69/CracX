@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Smart Learning Tracker</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">📚</div>
+                <h1>Smart Learning</h1>
+            </div>
+            <div class="status-indicator" id="statusIndicator">
+                <div class="status-dot" id="statusDot"></div>
+                <span id="statusText">Checking...</span>
+            </div>
+        </header>
+
+        <!-- Video Detection Section -->
+        <section class="video-section">
+            <div class="section-header">
+                <h2>🎥 Video Status</h2>
+                <button class="refresh-btn" id="refreshBtn" title="Refresh Status">
+                    ↻
+                </button>
+            </div>
+            
+            <div class="video-status" id="videoStatus">
+                <div class="no-video" id="noVideoState">
+                    <div class="icon">📺</div>
+                    <p>No video detected</p>
+                    <small>Start watching a video to see details here</small>
+                </div>
+                
+                <div class="video-active hidden" id="videoActiveState">
+                    <div class="video-info">
+                        <div class="video-title" id="videoTitle">Video Title Loading...</div>
+                        <div class="video-meta">
+                            <span class="platform" id="videoPlatform">Platform</span>
+                            <span class="duration" id="videoDuration">--:--</span>
+                        </div>
+                        <div class="video-url" id="videoUrl">URL will appear here</div>
+                    </div>
+                    <div class="video-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Debug Section -->
+        <section class="debug-section">
+            <div class="section-header">
+                <h2>🔧 Debug Info</h2>
+                <button class="clear-btn" id="clearDebugBtn" title="Clear Debug Log">
+                    🗑️
+                </button>
+            </div>
+            <div class="debug-log" id="debugLog">
+                <div class="debug-item">Extension initialized</div>
+            </div>
+        </section>
+
+        <!-- Footer Actions -->
+        <footer class="footer">
+            <button class="action-btn primary" id="trackingToggle">
+                <span id="trackingText">⏸️ Pause Tracking</span>
+            </button>
+            <button class="action-btn secondary" id="settingsBtn">
+                ⚙️ Settings
+            </button>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
