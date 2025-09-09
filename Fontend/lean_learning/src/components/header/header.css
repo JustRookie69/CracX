@@ -1,0 +1,73 @@
+.header {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;    /* Center children (like the nav bar) */
+    padding: 0px 50px;     /* Adjusted padding */
+    padding-top: 40px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.header-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Add space between top row and nav buttons */
+}
+
+.greeting {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.profile-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+}
+
+.profile-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+    gap: 95px; /* Adds space between the buttons */
+}
+
+/* --- STYLE CHANGES START HERE --- */
+
+/* This is the default style for INACTIVE buttons (Color Y) */
+.nav-button {
+    padding: 8px 40px;
+    font-size: 1em;
+    background-color: #ffffff; /* Lighter, inactive color */
+    color: #495057; /* Darker text for readability on light blue */
+    border: black 1px solid;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+
+/* This style applies ONLY to the ACTIVE button (Color X) */
+.nav-button.active {
+    background-color: #007bff; /* Brighter, active color */
+    color: white; /* White text for contrast */
+    font-weight: bold;
+}
+
+/* This hover effect applies ONLY to buttons that are NOT active */
+.nav-button:not(.active):hover {
+    background-color: #5ec7ff;
+}

@@ -1,0 +1,57 @@
+.accordion-item {
+    border-bottom: 1px solid #f0f0f0;
+}
+.accordion-item:last-child {
+    border-bottom: none;
+}
+.accordion-header {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes star to the right */
+}
+.accordion-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    flex-grow: 1; /* Allows it to take up space */
+}
+.accordion-toggle:hover .accordion-title {
+    color: #007bff;
+}
+.chevron-icon {
+    transition: transform 0.2s ease;
+    color: #007bff;
+}
+.chevron-icon.open {
+    transform: rotate(90deg);
+}
+.accordion-title {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #2c3e50;
+    transition: color 0.2s ease;
+}
+.star-btn, .bookmark-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #7f8c8d;
+    padding: 4px;
+}
+.star-btn:hover, .bookmark-btn:hover {
+    color: #0056b3;
+}
+.star-filled {
+    color: #FFC107;
+}
+.accordion-content {
+    padding: 0 16px 16px 44px; /* Indent content */
+}

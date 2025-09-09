@@ -1,0 +1,147 @@
+/* --- Main Card Layout --- */
+.name-card {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 25px;
+    font-family: sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+/* === START: CSS FIX FOR TOP LAYOUT === */
+
+.card-main-content {
+    display: flex; /* Establishes the flex container */
+    align-items: center; /* Vertically aligns both columns */
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* Column 1: Profile Visuals (Photo/Rank) - No changes needed */
+.card-profile-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0; /* Prevents this column from shrinking */
+}
+
+/* Column 2: User Details (Name/Institute) */
+.card-details {
+    margin-left: auto; /* This is the magic property that pushes the div to the right */
+    text-align: right; /* Aligns the text inside the div to the right */
+}
+
+/* === END: CSS FIX FOR TOP LAYOUT === */
+
+
+/* --- Shared Visual Styles (No changes from your code) --- */
+.user-title {
+    margin: 0;
+    font-weight: bold;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+.user-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rank-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.league-logo {
+    cursor: pointer;
+    color: #4285F4;
+}
+
+.user-rank {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.user-name {
+    margin: 0 0 10px 0;
+    font-size: 2.2em;
+}
+
+.user-stat, .user-detail {
+    margin: 5px 0;
+    color: #555;
+    font-size: 1.1em;
+}
+
+/* --- Contribution Graph Section (Centered - Correct from your last version) --- */
+.contribution-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.graph-header {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.graph-date-info {
+    margin: 0;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+.date-selectors {
+    display: flex;
+    gap: 10px;
+}
+.date-selectors select {
+    padding: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+}
+.contribution-graph {
+    display: grid;
+    gap: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contribution-graph.collapsed {
+    grid-template-columns: repeat(7, 20px);
+}
+.contribution-graph.expanded {
+    grid-template-columns: repeat(7, 1fr);
+    width: 250px;
+}
+.day-box {
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 3px;
+    background-color: #ebedf0;
+}
+.day-box.placeholder {
+    background-color: transparent;
+}
+.graph-toggle-hint {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-size: 0.8em;
+    color: #6c757d;
+}
+.day-box.level-0 { background-color: #ebedf0; }
+.day-box.level-1 { background-color: #9be9a8; }
+.day-box.level-2 { background-color: #40c463; }
+.day-box.level-3 { background-color: #30a14e; }
+.day-box.level-4 { background-color: #216e39; }

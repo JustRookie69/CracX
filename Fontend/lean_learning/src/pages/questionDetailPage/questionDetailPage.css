@@ -1,0 +1,53 @@
+.detail-page {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 24px 32px;
+}
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 20px;
+    margin-bottom: 16px;
+}
+.detail-header h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin: 0;
+}
+.detail-actions {
+    display: flex;
+    gap: 12px;
+}
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    border: 1px solid #dcdcdc;
+    color: #555;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+}
+.action-btn:hover {
+    background-color: #f8f8f8;
+    color: #000;
+}
+.subtopic-list {
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+/* Re-using these styles from other components for consistency */
+.question-row { display: grid; grid-template-columns: 40px 1fr 100px 100px 40px; align-items: center; padding: 12px 10px; background-color: #f9f9f9; border-top: 1px solid #eee; }
+.q-status, .q-acceptance, .q-difficulty, .q-actions { text-align: center; color: #7f8c8d; font-size: 14px; }
+.q-title { color: #2c3e50; text-align: left; font-size: 15px; font-weight: 500; }
+.q-difficulty.difficulty-easy { color: #00B8A3; }
+.q-difficulty.difficulty-medium { color: #FFC01E; }
+.q-difficulty.difficulty-hard { color: #FF375F; }
+.q-actions { font-size: 16px; }
